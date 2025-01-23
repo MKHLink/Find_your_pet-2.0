@@ -3,6 +3,7 @@
 import React from "react";
 import { getAnimals } from "../api/routes";
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 
 export default function DisplayAnimals(){
     const [zipcode, setZipcode] = useState('');
@@ -64,7 +65,7 @@ export default function DisplayAnimals(){
                     (animals.length > 0 ? animals : storedAnimals).map((animal, index) => (
                         <div className="animalCard" key={index}>
                             <img 
-                                src={animal.primary_photo_cropped?.medium || '../images/stock.jpg'} 
+                                src={animal.primary_photo_cropped?.medium || 'images/stock.jpg'} 
                                 alt="Animal Photo" 
                             />
                             <p>Name: {animal.name}</p>
