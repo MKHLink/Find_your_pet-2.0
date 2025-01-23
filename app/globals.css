@@ -27,8 +27,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-color:teal;
-  padding: 25px;
+  padding: 10px;
   gap: 20px;
+  position: fixed;
+  top:0;
+  z-index: 1000;
+  font-size: medium;
 }
 
 .comName{
@@ -123,6 +127,44 @@ body {
   box-shadow: -8px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,auto);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color:teal;
+  color: whitesmoke;
+  padding: 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.footer p{
+  font-size: large;
+  font-weight: bold;
+}
+
+.pagination{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pagination button{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 6px;
+  margin: 10px;
+  background-color: teal;
+  color: beige;
+}
+
 @media (max-width: 600px) {
   .userInput {
     padding: 20px;
@@ -134,5 +176,10 @@ body {
     position: static; 
     align-self: flex-end; 
     margin-top: 10px;
+  }
+
+  .cardContainer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
   }
 }

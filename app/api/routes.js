@@ -43,10 +43,10 @@ export async function getToken(){
     }
 }
 
-export async function getAnimals(location){
+export async function getAnimals(location, page=1){
     try {
         const token = await getToken();
-        const response = await fetch(`https://api.petfinder.com/v2/animals?location=${location}`, {
+        const response = await fetch(`https://api.petfinder.com/v2/animals?location=${location}&page=${page}`, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             },
