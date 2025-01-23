@@ -19,3 +19,53 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.navBar{
+  color: whitesmoke;
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color:teal;
+  padding: 25px;
+  gap: 20px;
+}
+
+.comName{
+  color: white;
+  font-size: 20px;
+}
+
+.hero{
+  position: relative;
+}
+
+.hero img{
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.heroText{
+  position: absolute;
+  top:45%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+
+.heroText h1{
+  font-size: 40px;
+}
+
+.heroText p{
+  font-size: 20px;
+}
+
+.message{
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  color: gray;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
