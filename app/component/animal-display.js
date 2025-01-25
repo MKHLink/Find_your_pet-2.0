@@ -12,6 +12,7 @@ export default function DisplayAnimals(){
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages,setTotalPages] = useState(1);
 
+    //loads the previous animals from local storage
     useEffect(() => {
         let storedAnimals = localStorage.getItem('storedAnimals');
         if (storedAnimals && storedAnimals !== 'undefined') {
@@ -26,6 +27,7 @@ export default function DisplayAnimals(){
         }
     }, []);
 
+    //calls getAnimal api and sets the animals to local storage
     const fetchAnimals=(page)=>{
         getAnimals(zipcode,page)
         .then((data)=>{
@@ -39,10 +41,12 @@ export default function DisplayAnimals(){
         })
     }
     
+    //middle function that takes in the zipcode and calls the fetchAnimals
     const handleZipcode=()=>{
         fetchAnimals(1);
     }
 
+    //handles page scroll to top when next button is clicked
     const handlePageChange=(page)=>{
         if(page>0 && page<totalPages){
             fetchAnimals(page);

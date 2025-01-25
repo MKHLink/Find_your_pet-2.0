@@ -1,5 +1,6 @@
 import React from 'react';
 
+//foother with helpful links
 export default function Footer(){
     return(
         <div className='footer' id='contact'>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+//sticky nav bar, scrolls to the component of selection
 export default function NavBar(){
     const handleScroll=(id)=>{
         let element = document.getElementById(id);
