@@ -1,5 +1,6 @@
 import React from 'react';
 
+//displays hero image
 export default function HeroSection(){
     return(
         <div className='hero'>

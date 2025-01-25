@@ -1,3 +1,4 @@
+//gets the token needed to call the petfinder API
 export async function getToken(){
     try {
         const response = await fetch('https://api.petfinder.com/v2/oauth2/token', {
@@ -16,6 +17,7 @@ export async function getToken(){
     }
 }
 
+//main function that uses the token and calls the API with location of the user and page for pagination
 export async function getAnimals(location, page=1){
     try {
         const token = await getToken();
